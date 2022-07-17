@@ -10,20 +10,6 @@
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <script
-      src="assets/plugins/jquery/jquery-2.2.3.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="assets/plugins/mycart/js/jquery.mycart.js"
-    ></script>
     <!-- Custom styles for this template -->
     <link href="style.css" rel="stylesheet" />
   </head>
@@ -33,11 +19,27 @@
       <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container">
           <a class="navbar-brand" href="menu.html">Kedai Kopi Hitam</a>
-          <button class="btn btn-outline text-white" type="button">
-            <i class="fa-solid fa-cart-shopping my-cart-icon"
-              ><span class="badge badge-notify my-cart-badge"></span
-            ></i>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
           </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="kopi.html">Kopi Nusantara</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
     </header>
@@ -46,7 +48,6 @@
     <main class="flex-shrink-0">
       <div class="container">
         <p class="lead">Daftar Menu</p>
-        <p>Silakan pesan dan bayar di kasir. Terimakasih</p>
         <div class="row">
           <div class="col-sm-6">
             <div class="card bg-dark text-white border-warning mb-3">
@@ -57,70 +58,18 @@
                     <tr>
                       <td>Kopi Lampung</td>
                       <td>15K</td>
-                      <td>
-                        <button
-                          class="btn btn-sm btn-success my-cart-btn"
-                          data-id="101"
-                          data-name="Kopi Lampung"
-                          data-summary="Kopi Lampung"
-                          data-price="15000"
-                          data-quantity="1"
-                          data-image="assets/images/kopi.png"
-                        >
-                          <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                      </td>
                     </tr>
                     <tr>
                       <td>Kopi Bengkulu</td>
                       <td>15K</td>
-                      <td>
-                        <button
-                          class="btn btn-sm btn-success my-cart-btn"
-                          data-id="102"
-                          data-name="Kopi Bengkulu"
-                          data-summary="Kopi Bengkulu"
-                          data-price="15000"
-                          data-quantity="1"
-                          data-image="assets/images/kopi.png"
-                        >
-                          <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                      </td>
                     </tr>
                     <tr>
                       <td>Kopi Jambi</td>
                       <td>15K</td>
-                      <td>
-                        <button
-                          class="btn btn-sm btn-success my-cart-btn"
-                          data-id="103"
-                          data-name="Kopi Jambi"
-                          data-summary="Kopi Jambi"
-                          data-price="15000"
-                          data-quantity="1"
-                          data-image="assets/images/kopi.png"
-                        >
-                          <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                      </td>
                     </tr>
                     <tr>
                       <td>Kopi Flores</td>
                       <td>15K</td>
-                      <td>
-                        <button
-                          class="btn btn-sm btn-success my-cart-btn"
-                          data-id="104"
-                          data-name="Kopi Flores"
-                          data-summary="Kopi Flores"
-                          data-price="15000"
-                          data-quantity="1"
-                          data-image="assets/images/kopi.png"
-                        >
-                          <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                      </td>
                     </tr>
                   </tbody>
                 </table>
@@ -343,6 +292,7 @@
                       <td>Mie Vegetarian</td>
                       <td>10K</td>
                     </tr>
+
                   </tbody>
                 </table>
               </div>
@@ -403,13 +353,16 @@
           <!-- ./col-sm-6-->
         </div>
         <!-- ./row-->
+
       </div>
       <!-- ./container-->
     </main>
 
     <footer class="footer mt-auto py-3 bg-dark text-white">
       <div class="container">
-        <span class="xtext-muted">Kedai Kopi Hitam</span>
+        <span class="xtext-muted"
+          >Silakan pesan dan bayar di kasir. Terimakasih</span
+        >
       </div>
     </footer>
   </body>
@@ -418,90 +371,4 @@
     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
     crossorigin="anonymous"
   ></script>
-  <script type="text/javascript">
-    $(function () {
-      var goToCartIcon = function ($addTocartBtn) {
-        var $cartIcon = $(".my-cart-icon");
-        var $image = $(
-          '<img width="30px" height="30px" src="' +
-            $addTocartBtn.data("image") +
-            '"/>'
-        ).css({ position: "fixed", "z-index": "999" });
-        $addTocartBtn.prepend($image);
-        var position = $cartIcon.position();
-        $image.animate(
-          {
-            top: position.top,
-            left: position.left,
-          },
-          500,
-          "linear",
-          function () {
-            $image.remove();
-          }
-        );
-      };
-
-      $(".my-cart-btn").myCart({
-        currencySymbol: "",
-        classCartIcon: "my-cart-icon",
-        classCartBadge: "my-cart-badge",
-        classProductQuantity: "my-product-quantity",
-        classProductRemove: "my-product-remove",
-        classCheckoutCart: "my-cart-checkout",
-        affixCartIcon: true,
-        showCheckoutModal: true,
-        numberOfDecimals: 0,
-        cartItems: [
-
-        ],
-        clickOnAddToCart: function ($addTocart) {
-          goToCartIcon($addTocart);
-        },
-        afterAddOnCart: function (products, totalPrice, totalQuantity) {
-          console.log("afterAddOnCart", products, totalPrice, totalQuantity);
-        },
-        clickOnCartIcon: function (
-          $cartIcon,
-          products,
-          totalPrice,
-          totalQuantity
-        ) {
-          console.log(
-            "cart icon clicked",
-            $cartIcon,
-            products,
-            totalPrice,
-            totalQuantity
-          );
-        },
-        checkoutCart: function (products, totalPrice, totalQuantity) {
-          var checkoutString =
-            "Total Price: " + totalPrice + "\nTotal Quantity: " + totalQuantity;
-          checkoutString +=
-            "\n\n id \t name \t summary \t price \t quantity \t image path";
-          $.each(products, function () {
-            checkoutString +=
-              "\n " +
-              this.id +
-              " \t " +
-              this.name +
-              " \t " +
-              this.summary +
-              " \t " +
-              this.price +
-              " \t " +
-              this.quantity +
-              " \t " +
-              this.image;
-          });
-          //alert(checkoutString);
-          console.log("checking out", products, totalPrice, totalQuantity);
-        },
-
-      });
-
-      
-    });
-  </script>
 </html>
