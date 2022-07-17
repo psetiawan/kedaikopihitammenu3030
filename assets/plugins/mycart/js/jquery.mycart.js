@@ -229,7 +229,7 @@
         '<div class="modal-body">' +
         '<table class="table table-hover table-responsive" id="' + idCartTable + '"></table>' +
         '</div>' +
-        '<div class="modal-footer">' +
+        '<div class="modal-footer"><span class="text-dark">Silakan pesan dan bayar di kasir</span>' +
         '<button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>' +
         '<button type="button" class="btn btn-primary ' + classCheckoutCart + ' d-none">Checkout</button>' +
         '</div>' +
