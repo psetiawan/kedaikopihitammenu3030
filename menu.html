@@ -30,12 +30,12 @@
       <!-- Fixed navbar -->
       <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container">
-          <a class="navbar-brand" href="menu.html">Kedai Kopi Hitam</a>
-          <button class="btn btn-outline text-white btn-lg" type="button">
+          <a class="navbar-brand" href="#">Daftar Menu</a>
+          <xbutton class="btn btn-outline text-white btn-lg" type="button">
             <i class="fa-solid fa-cart-shopping my-cart-icon"
               ><span class="badge badge-notify my-cart-badge"></span
             ></i>
-          </button>
+          </xbutton>
         </div>
       </nav>
     </header>
@@ -43,946 +43,1362 @@
     <!-- Begin page content -->
     <main class="flex-shrink-0">
       <div class="container">
-        <p class="lead">Daftar Menu</p>
         <p>Silakan pesan dan bayar di kasir. Terimakasih</p>
-        <div class="row">
-          <div class="col-sm-6">
-            <div class="card bg-dark text-white border-warning mb-3">
-              <h5 class="card-header bg-warning text-dark">Kopi Robusta</h5>
-              <div class="card-body">
-                <table class="table table-dark">
-                  <tbody>
-                    <tr>
-                      <td>Kopi Lampung</td>
-                      <td>8K</td>
-                      <td>
-                        <button
-                          class="btn btn-sm btn-success my-cart-btn"
-                          data-id="101"
-                          data-name="Kopi Lampung"
-                          data-summary="Kopi Lampung"
-                          data-price="8000"
-                          data-quantity="1"
-                          data-image="assets/images/kopi.png"
-                        >
-                          <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Kopi Flores</td>
-                      <td>8K</td>
-                      <td>
-                        <button
-                          class="btn btn-sm btn-success my-cart-btn"
-                          data-id="102"
-                          data-name="Kopi Flores (R)"
-                          data-summary="Kopi Flores (R)"
-                          data-price="8000"
-                          data-quantity="1"
-                          data-image="assets/images/kopi.png"
-                        >
-                          <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Kopi Gayo</td>
-                      <td>8K</td>
-                      <td>
-                        <button
-                          class="btn btn-sm btn-success my-cart-btn"
-                          data-id="103"
-                          data-name="Kopi Gayo (R)"
-                          data-summary="Kopi Gayo (R)"
-                          data-price="8000"
-                          data-quantity="1"
-                          data-image="assets/images/kopi.png"
-                        >
-                          <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Kopi Kintamani</td>
-                      <td>8K</td>
-                      <td>
-                        <button
-                          class="btn btn-sm btn-success my-cart-btn"
-                          data-id="104"
-                          data-name="Kopi Kintamani (R)"
-                          data-summary="Kopi Kintamani (R)"
-                          data-price="8000"
-                          data-quantity="1"
-                          data-image="assets/images/kopi.png"
-                        >
-                          <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Kopi Toraja</td>
-                      <td>8K</td>
-                      <td>
-                        <button
-                          class="btn btn-sm btn-success my-cart-btn"
-                          data-id="105"
-                          data-name="Kopi Toraja"
-                          data-summary="Kopi Toraja"
-                          data-price="8000"
-                          data-quantity="1"
-                          data-image="assets/images/kopi.png"
-                        >
-                          <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Kopi Sidikalang</td>
-                      <td>8K</td>
-                      <td>
-                        <button
-                          class="btn btn-sm btn-success my-cart-btn"
-                          data-id="106"
-                          data-name="Kopi Sidikalang"
-                          data-summary="Kopi Sidikalang"
-                          data-price="8000"
-                          data-quantity="1"
-                          data-image="assets/images/kopi.png"
-                        >
-                          <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+
+        <!-- tabs -->
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link text-white active"
+              id="pills-kedai-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#pills-kedai"
+              type="button"
+              role="tab"
+              aria-controls="pills-kedai"
+              aria-selected="true"
+            >
+              Kedai Kopi Hitam
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link text-white"
+              id="pills-soto-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#pills-soto"
+              type="button"
+              role="tab"
+              aria-controls="pills-soto"
+              aria-selected="false"
+            >
+              Soto Cemplon
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link text-white"
+              id="pills-roti-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#pills-roti"
+              type="button"
+              role="tab"
+              aria-controls="pills-roti"
+              aria-selected="false"
+            >
+              Roti Kapiten
+            </button>
+          </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+          <div
+            class="tab-pane fade show active"
+            id="pills-kedai"
+            role="tabpanel"
+            aria-labelledby="pills-kedai-tab"
+            tabindex="0"
+          >
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="card bg-dark text-white border-warning mb-3">
+                  <h5 class="card-header bg-warning text-dark">Kopi Robusta</h5>
+                  <div class="card-body">
+                    <table class="table table-dark">
+                      <tbody>
+                        <tr>
+                          <td>Kopi Lampung</td>
+                          <td>8K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="101"
+                              data-name="Kopi Lampung (R)"
+                              data-summary="Kopi Lampung"
+                              data-price="8000"
+                              data-quantity="1"
+                              data-image="assets/images/kopi.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Kopi Flores</td>
+                          <td>8K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="102"
+                              data-name="Kopi Flores (R)"
+                              data-summary="Kopi Flores (R)"
+                              data-price="8000"
+                              data-quantity="1"
+                              data-image="assets/images/kopi.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Kopi Gayo</td>
+                          <td>8K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="103"
+                              data-name="Kopi Gayo (R)"
+                              data-summary="Kopi Gayo (R)"
+                              data-price="8000"
+                              data-quantity="1"
+                              data-image="assets/images/kopi.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Kopi Kintamani</td>
+                          <td>8K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="104"
+                              data-name="Kopi Kintamani (R)"
+                              data-summary="Kopi Kintamani (R)"
+                              data-price="8000"
+                              data-quantity="1"
+                              data-image="assets/images/kopi.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Kopi Toraja</td>
+                          <td>8K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="105"
+                              data-name="Kopi Toraja (R)"
+                              data-summary="Kopi Toraja"
+                              data-price="8000"
+                              data-quantity="1"
+                              data-image="assets/images/kopi.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Kopi Sidikalang</td>
+                          <td>8K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="106"
+                              data-name="Kopi Sidikalang (R)"
+                              data-summary="Kopi Sidikalang"
+                              data-price="8000"
+                              data-quantity="1"
+                              data-image="assets/images/kopi.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <!-- ./col-sm-6-->
-          <div class="col-sm-6">
-            <div class="card bg-dark text-white border-warning mb-3">
-              <h5 class="card-header bg-warning text-dark">Kopi Arabica</h5>
-              <div class="card-body">
-                <table class="table table-dark">
-                  <tbody>
-                    <tr>
-                      <td>Kopi Java Preanger</td>
-                      <td>10K</td>
-                      <td>
-                        <button
-                          class="btn btn-sm btn-success my-cart-btn"
-                          data-id="201"
-                          data-name="Kopi Java Preanger"
-                          data-summary="Kopi Java Preanger"
-                          data-price="10000"
-                          data-quantity="1"
-                          data-image="assets/images/kopi.png"
-                        >
-                          <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Kopi Kintamani</td>
-                      <td>10K</td>
-                      <td>
-                        <button
-                          class="btn btn-sm btn-success my-cart-btn"
-                          data-id="202"
-                          data-name="Kopi Kintamani (A)"
-                          data-summary="Kopi Kintamani (A)"
-                          data-price="10000"
-                          data-quantity="1"
-                          data-image="assets/images/kopi.png"
-                        >
-                          <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Kopi Flores</td>
-                      <td>10K</td>
-                      <td>
-                        <button
-                          class="btn btn-sm btn-success my-cart-btn"
-                          data-id="203"
-                          data-name="Kopi Flores (A)"
-                          data-summary="Kopi Flores (A)"
-                          data-price="10000"
-                          data-quantity="1"
-                          data-image="assets/images/kopi.png"
-                        >
-                          <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Kopi Gayo</td>
-                      <td>10K</td>
-                      <td>
-                        <button
-                          class="btn btn-sm btn-success my-cart-btn"
-                          data-id="204"
-                          data-name="Kopi Gayo (A)"
-                          data-summary="Kopi Gayo (A)"
-                          data-price="10000"
-                          data-quantity="1"
-                          data-image="assets/images/kopi.png"
-                        >
-                          <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Kopi Papua Wamena</td>
-                      <td>10K</td>
-                      <td>
-                        <button
-                          class="btn btn-sm btn-success my-cart-btn"
-                          data-id="205"
-                          data-name="Kopi Papua Wamena"
-                          data-summary="Kopi Papua Wamena"
-                          data-price="10000"
-                          data-quantity="1"
-                          data-image="assets/images/kopi.png"
-                        >
-                          <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+              <!-- ./col-sm-6-->
+              <div class="col-sm-6">
+                <div class="card bg-dark text-white border-warning mb-3">
+                  <h5 class="card-header bg-warning text-dark">Kopi Arabica</h5>
+                  <div class="card-body">
+                    <table class="table table-dark">
+                      <tbody>
+                        <tr>
+                          <td>Kopi Java Preanger</td>
+                          <td>10K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="201"
+                              data-name="Kopi Java Preanger (A)"
+                              data-summary="Kopi Java Preanger"
+                              data-price="10000"
+                              data-quantity="1"
+                              data-image="assets/images/kopi.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Kopi Kintamani</td>
+                          <td>10K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="202"
+                              data-name="Kopi Kintamani (A)"
+                              data-summary="Kopi Kintamani (A)"
+                              data-price="10000"
+                              data-quantity="1"
+                              data-image="assets/images/kopi.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Kopi Flores</td>
+                          <td>10K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="203"
+                              data-name="Kopi Flores (A)"
+                              data-summary="Kopi Flores (A)"
+                              data-price="10000"
+                              data-quantity="1"
+                              data-image="assets/images/kopi.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Kopi Gayo</td>
+                          <td>10K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="204"
+                              data-name="Kopi Gayo (A)"
+                              data-summary="Kopi Gayo (A)"
+                              data-price="10000"
+                              data-quantity="1"
+                              data-image="assets/images/kopi.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Kopi Papua Wamena</td>
+                          <td>10K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="205"
+                              data-name="Kopi Papua Wamena (A)"
+                              data-summary="Kopi Papua Wamena"
+                              data-price="10000"
+                              data-quantity="1"
+                              data-image="assets/images/kopi.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
               </div>
+              <!-- ./col-sm-6-->
             </div>
+            <!-- ./row-->
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="card bg-dark text-white border-success mb-3">
+                  <h5 class="card-header bg-success text-dark">
+                    Makanan Ringan
+                  </h5>
+                  <div class="card-body">
+                    <table class="table table-dark">
+                      <tbody>
+                        <tr>
+                          <td>Kentang Goreng</td>
+                          <td>10K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="301"
+                              data-name="Kentang Goreng"
+                              data-summary="Kentang Goreng"
+                              data-price="10000"
+                              data-quantity="1"
+                              data-image="assets/images/food.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Pisang Goreng</td>
+                          <td>10K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="302"
+                              data-name="Pisang Goreng"
+                              data-summary="Pisang Goreng"
+                              data-price="10000"
+                              data-quantity="1"
+                              data-image="assets/images/food.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>Mendoan</td>
+                          <td>10K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="303"
+                              data-name="Mendoan"
+                              data-summary="Mendoan"
+                              data-price="10000"
+                              data-quantity="1"
+                              data-image="assets/images/food.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>Tahu Kemul</td>
+                          <td>10K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="304"
+                              data-name="Tahu Kemul"
+                              data-summary="Tahu Kemul"
+                              data-price="10000"
+                              data-quantity="1"
+                              data-image="assets/images/food.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>Tahu Bakso</td>
+                          <td>10K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="305"
+                              data-name="Tahu Bakso"
+                              data-summary="Tahu Bakso"
+                              data-price="10000"
+                              data-quantity="1"
+                              data-image="assets/images/food.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>Tahu Garam Pedas</td>
+                          <td>10K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="306"
+                              data-name="Tahu Garam Pedas"
+                              data-summary="Tahu Garam Pedas"
+                              data-price="10000"
+                              data-quantity="1"
+                              data-image="assets/images/food.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>Singkong Goreng</td>
+                          <td>10K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="307"
+                              data-name="Singkong Goreng"
+                              data-summary="Singkong Goreng"
+                              data-price="10000"
+                              data-quantity="1"
+                              data-image="assets/images/food.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>Perkedel Jagung</td>
+                          <td>10K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="308"
+                              data-name="Perkedel Jagung"
+                              data-summary="Perkedel Jagung"
+                              data-price="10000"
+                              data-quantity="1"
+                              data-image="assets/images/food.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>Jamur Crispy</td>
+                          <td>10K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="309"
+                              data-name="Jamur Crispy"
+                              data-summary="Jamur Crispy"
+                              data-price="10000"
+                              data-quantity="1"
+                              data-image="assets/images/food.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <!-- ./col-sm-6-->
+              <div class="col-sm-6">
+                <div class="card bg-dark text-white border-success mb-3">
+                  <h5 class="card-header bg-success text-dark">
+                    Aneka Rebusan
+                  </h5>
+                  <div class="card-body">
+                    <table class="table table-dark">
+                      <tbody>
+                        <tr>
+                          <td>Kacang Rebus</td>
+                          <td>10K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="401"
+                              data-name="Kacang Rebus"
+                              data-summary="Kacang Rebus"
+                              data-price="10000"
+                              data-quantity="1"
+                              data-image="assets/images/food.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Singkong Rebus</td>
+                          <td>10K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="402"
+                              data-name="Singkong Rebus"
+                              data-summary="Singkong Rebus"
+                              data-price="10000"
+                              data-quantity="1"
+                              data-image="assets/images/food.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Pisang Rebus</td>
+                          <td>10K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="403"
+                              data-name="Pisang Rebus"
+                              data-summary="Pisang Rebus"
+                              data-price="10000"
+                              data-quantity="1"
+                              data-image="assets/images/food.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <!-- ./col-sm-6-->
+            </div>
+            <!-- ./row-->
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="card bg-dark text-white border-danger mb-3">
+                  <h5 class="card-header bg-danger text-white">
+                    Menu Royokan / Platter
+                  </h5>
+                  <div class="card-body">
+                    <table class="table table-dark">
+                      <tbody>
+                        <tr>
+                          <td>Kentang Goreng + Nugget + Sosis</td>
+                          <td>15K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="501"
+                              data-name="Kentang Goreng + Nugget + Sosis"
+                              data-summary="Kentang Goreng + Nugget + Sosis"
+                              data-price="15000"
+                              data-quantity="1"
+                              data-image="assets/images/food.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <!-- ./col-sm-6-->
+              <div class="col-sm-6">
+                <div class="card bg-dark text-white border-danger mb-3">
+                  <h5 class="card-header bg-danger text-white">
+                    Wedangan Non Kopi
+                  </h5>
+                  <div class="card-body">
+                    <table class="table table-dark">
+                      <tbody>
+                        <tr>
+                          <td>Wedang Jahe</td>
+                          <td>6K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="601"
+                              data-name="Wedang Jahe"
+                              data-summary="Wedang Jahe"
+                              data-price="6000"
+                              data-quantity="1"
+                              data-image="assets/images/kopi.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Wedang Serbat</td>
+                          <td>5K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="602"
+                              data-name="Wedang Serbat"
+                              data-summary="Wedang Serbat"
+                              data-price="5000"
+                              data-quantity="1"
+                              data-image="assets/images/kopi.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Coklat Panas</td>
+                          <td>10K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="603"
+                              data-name="Coklat Panas"
+                              data-summary="Coklat Panas"
+                              data-price="10000"
+                              data-quantity="1"
+                              data-image="assets/images/kopi.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <!-- ./col-sm-6-->
+            </div>
+            <!-- ./row-->
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="card bg-dark text-white border-info mb-3">
+                  <h5 class="card-header bg-info text-dark">Ngemie Seleraku</h5>
+                  <div class="card-body">
+                    <table class="table table-dark">
+                      <tbody>
+                        <tr>
+                          <td>Mie Goreng</td>
+                          <td>5K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="701"
+                              data-name="Mie Goreng"
+                              data-summary="Mie Goreng"
+                              data-price="5000"
+                              data-quantity="1"
+                              data-image="assets/images/food.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Mie Rebus</td>
+                          <td>5K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="702"
+                              data-name="Mie Rebus"
+                              data-summary="Mie Rebus"
+                              data-price="5000"
+                              data-quantity="1"
+                              data-image="assets/images/food.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Mie Telor</td>
+                          <td>8K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="703"
+                              data-name="Mie Telor"
+                              data-summary="Mie Telor"
+                              data-price="8000"
+                              data-quantity="1"
+                              data-image="assets/images/food.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Mie Vegetarian</td>
+                          <td>8K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="704"
+                              data-name="Mie Vegetarian"
+                              data-summary="Mie Vegetarian"
+                              data-price="8000"
+                              data-quantity="1"
+                              data-image="assets/images/food.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Mie Komplit</td>
+                          <td>10K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="705"
+                              data-name="Mie Komplit"
+                              data-summary="Mie Komplit"
+                              data-price="10000"
+                              data-quantity="1"
+                              data-image="assets/images/food.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <!-- ./col-sm-6-->
+            </div>
+            <!-- ./row-->
           </div>
-          <!-- ./col-sm-6-->
+          <!-- ./tabpane -->
+          <div
+            class="tab-pane fade"
+            id="pills-soto"
+            role="tabpanel"
+            aria-labelledby="pills-soto-tab"
+            tabindex="0"
+          >
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="card bg-dark text-white border-info mb-3">
+                  <h5 class="card-header bg-info text-dark">Makanan</h5>
+                  <div class="card-body">
+                    <table class="table table-dark">
+                      <tbody>
+                        <tr>
+                          <td>Soto Ayam Nasi Campur</td>
+                          <td>10K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="801"
+                              data-name="Soto Ayam Nasi Campur"
+                              data-summary="Soto Ayam Nasi Campur"
+                              data-price="10000"
+                              data-quantity="1"
+                              data-image="assets/images/food.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Soto Ayam Nasi Pisah</td>
+                          <td>13K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="802"
+                              data-name="Soto Ayam Nasi Pisah"
+                              data-summary="Soto Ayam Nasi Pisah"
+                              data-price="13000"
+                              data-quantity="1"
+                              data-image="assets/images/food.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Kupat Tahu Magelang</td>
+                          <td>10K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="803"
+                              data-name="Kupat Tahu Magelang"
+                              data-summary="Kupat Tahu Magelang"
+                              data-price="10000"
+                              data-quantity="1"
+                              data-image="assets/images/food.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Kupat Tahu + Telur</td>
+                          <td>13K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="804"
+                              data-name="Kupat Tahu + Telur"
+                              data-summary="Kupat Tahu + Telur"
+                              data-price="13000"
+                              data-quantity="1"
+                              data-image="assets/images/food.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Tahu Gimbal</td>
+                          <td>15K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="805"
+                              data-name="Tahu Gimbal"
+                              data-summary="Tahu Gimbal"
+                              data-price="15000"
+                              data-quantity="1"
+                              data-image="assets/images/food.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Tahu Gimbal + Telur</td>
+                          <td>18K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="806"
+                              data-name="Tahu Gimbal + Telur"
+                              data-summary="Tahu Gimbal + Telur"
+                              data-price="18000"
+                              data-quantity="1"
+                              data-image="assets/images/food.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Aneka Sate</td>
+                          <td>5K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="807"
+                              data-name="Aneka Sate"
+                              data-summary="Aneka Sate"
+                              data-price="5000"
+                              data-quantity="1"
+                              data-image="assets/images/food.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Tahu Bakso</td>
+                          <td>5K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="808"
+                              data-name="Tahu Bakso"
+                              data-summary="Tahu Bakso"
+                              data-price="5000"
+                              data-quantity="1"
+                              data-image="assets/images/food.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Bergedel</td>
+                          <td>3K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="809"
+                              data-name="Bergedel"
+                              data-summary="Bergedel"
+                              data-price="3000"
+                              data-quantity="1"
+                              data-image="assets/images/food.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Tempe Goreng</td>
+                          <td>1K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="810"
+                              data-name="Tempe Goreng"
+                              data-summary="Tempe Goreng"
+                              data-price="1000"
+                              data-quantity="1"
+                              data-image="assets/images/food.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <!-- ./col-sm-6-->
+              <div class="col-sm-6">
+                <div class="card bg-dark text-white border-danger mb-3">
+                  <h5 class="card-header bg-danger text-white">Minuman</h5>
+                  <div class="card-body">
+                    <table class="table table-dark">
+                      <tbody>
+                        <tr>
+                          <td>Teh Panas</td>
+                          <td>3K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="604"
+                              data-name="Teh Panas"
+                              data-summary="Teh Panas"
+                              data-price="3000"
+                              data-quantity="1"
+                              data-image="assets/images/kopi.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Es Teh</td>
+                          <td>4K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="605"
+                              data-name="Es Teh"
+                              data-summary="Es Teh"
+                              data-price="4000"
+                              data-quantity="1"
+                              data-image="assets/images/kopi.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Jeruk Panas</td>
+                          <td>4K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="606"
+                              data-name="Jeruk Panas"
+                              data-summary="Jeruk Panas"
+                              data-price="4000"
+                              data-quantity="1"
+                              data-image="assets/images/kopi.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Es Jeruk</td>
+                          <td>5K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="607"
+                              data-name="Es Jeruk"
+                              data-summary="Es Jeruk"
+                              data-price="5000"
+                              data-quantity="1"
+                              data-image="assets/images/kopi.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Wedang Tape Ketan</td>
+                          <td>5K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="608"
+                              data-name="Wedang Tape Ketan"
+                              data-summary="Wedang Tape Ketan"
+                              data-price="5000"
+                              data-quantity="1"
+                              data-image="assets/images/kopi.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Es Tape Ketan</td>
+                          <td>5K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="609"
+                              data-name="Es Tape Ketan"
+                              data-summary="Es Tape Ketan"
+                              data-price="5000"
+                              data-quantity="1"
+                              data-image="assets/images/kopi.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <!-- ./col-sm-6-->
+            </div>
+            <!-- ./row-->
+          </div>
+          <div
+            class="tab-pane fade"
+            id="pills-roti"
+            role="tabpanel"
+            aria-labelledby="pills-roti-tab"
+            tabindex="0"
+          >
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="card bg-dark text-white border-warning mb-3">
+                  <h5 class="card-header bg-warning text-dark">Roti Kopi Enak</h5>
+                  <div class="card-body">
+                    <table class="table table-dark">
+                      <tbody>
+                        <tr>
+                          <td>Roti Kopi 1 pc</td>
+                          <td>8K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="901"
+                              data-name="Roti Kopi 1 pc"
+                              data-summary="Roti Kopi 1 pc"
+                              data-price="8000"
+                              data-quantity="1"
+                              data-image="assets/images/food.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Roti Kopi 2 pcs</td>
+                          <td>14K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="902"
+                              data-name="Roti Kopi 2 pcs"
+                              data-summary="Roti Kopi 2 pcs"
+                              data-price="14000"
+                              data-quantity="1"
+                              data-image="assets/images/food.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Roti Kopi 6 pcs</td>
+                          <td>35K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="903"
+                              data-name="Roti Kopi 6 pcs"
+                              data-summary="Roti Kopi 6 pcs"
+                              data-price="35000"
+                              data-quantity="1"
+                              data-image="assets/images/food.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Roti Kopi Mix</td>
+                          <td>35K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="904"
+                              data-name="Roti Kopi Mix"
+                              data-summary="Roti Kopi Mix"
+                              data-price="35000"
+                              data-quantity="1"
+                              data-image="assets/images/food.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <!-- ./col-sm-6-->
+              <div class="col-sm-6">
+                <div class="card bg-dark text-white border-warning mb-3">
+                  <h5 class="card-header bg-warning text-dark">Donat Nikmat</h5>
+                  <div class="card-body">
+                    <table class="table table-dark">
+                      <tbody>
+                        <tr>
+                          <td>Donat 1 pc</td>
+                          <td>7K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="1001"
+                              data-name="Donat 1 pc"
+                              data-summary="Donat 1 pc"
+                              data-price="7000"
+                              data-quantity="1"
+                              data-image="assets/images/food.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Donat 2 pcs</td>
+                          <td>12K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="1002"
+                              data-name="Donat 2 pcs"
+                              data-summary="Donat 2 pcs"
+                              data-price="12000"
+                              data-quantity="1"
+                              data-image="assets/images/food.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Donat 6 pcs</td>
+                          <td>32K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="1003"
+                              data-name="Donat 6 pcs"
+                              data-summary="Donat 6 pcs"
+                              data-price="32000"
+                              data-quantity="1"
+                              data-image="assets/images/food.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Donat Mix</td>
+                          <td>35K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="1004"
+                              data-name="Donat Mix"
+                              data-summary="Donat Mix"
+                              data-price="35000"
+                              data-quantity="1"
+                              data-image="assets/images/food.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <!-- ./col-sm-6-->
+            </div>
+            <!-- ./row-->
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="card bg-dark text-white border-warning mb-3">
+                  <h5 class="card-header bg-warning text-dark">Roti Gembong</h5>
+                  <div class="card-body">
+                    <table class="table table-dark">
+                      <tbody>
+                        <tr>
+                          <td>Roti Gembong 
+                            <p><small>Strawberry, Tiramisu, Matcha, Vanilla, Coklat, Taro</small></p>
+                          </td>
+                          <td>16K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="1101"
+                              data-name="Roti Gembong A"
+                              data-summary="Roti Gembong A"
+                              data-price="16000"
+                              data-quantity="1"
+                              data-image="assets/images/food.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Roti Gembong
+                            <p><small>Choco Crunch, Susu Keju</small></p>
+                          </td>
+                          <td>18K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="1102"
+                              data-name="Roti Gembong B"
+                              data-summary="Roti Gembong B"
+                              data-price="18000"
+                              data-quantity="1"
+                              data-image="assets/images/food.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <!-- ./col-sm-6-->
+              <div class="col-sm-6">
+                <div class="card bg-dark text-white border-warning mb-3">
+                  <h5 class="card-header bg-warning text-dark">Minuman Kekinian</h5>
+                  <div class="card-body">
+                    <table class="table table-dark">
+                      <tbody>
+                        <tr>
+                          <td>Es Kopi Susu</td>
+                          <td>15K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="1201"
+                              data-name="Es Kopi Susu"
+                              data-summary="Es Kopi Susu"
+                              data-price="15000"
+                              data-quantity="1"
+                              data-image="assets/images/kopi.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Es Kopi Gula Aren</td>
+                          <td>15K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="1202"
+                              data-name="Es Kopi Gula Aren"
+                              data-summary="Es Kopi Gula Aren"
+                              data-price="15000"
+                              data-quantity="1"
+                              data-image="assets/images/kopi.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Es Capuccino</td>
+                          <td>15K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="1203"
+                              data-name="Es Capuccino"
+                              data-summary="Es Capuccino"
+                              data-price="15000"
+                              data-quantity="1"
+                              data-image="assets/images/kopi.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Es Coklat</td>
+                          <td>15K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="1204"
+                              data-name="Es Coklat kapiten"
+                              data-summary="Es Coklat"
+                              data-price="15000"
+                              data-quantity="1"
+                              data-image="assets/images/kopi.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Kopi Panas</td>
+                          <td>13K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="1205"
+                              data-name="Kopi Panas kapiten"
+                              data-summary="Kopi Panas"
+                              data-price="13000"
+                              data-quantity="1"
+                              data-image="assets/images/kopi.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <!-- ./col-sm-6-->
+            </div>
+            <!-- ./row-->
+          </div>
+          <!-- ./tabpane-->
+          <div
+            class="tab-pane fade"
+            id="pills-disabled"
+            role="tabpanel"
+            aria-labelledby="pills-disabled-tab"
+            tabindex="0"
+          >
+            ...
+          </div>
+          <!-- ./tabpane-->
         </div>
-        <!-- ./row-->
-        <div class="row">
-          <div class="col-sm-6">
-            <div class="card bg-dark text-white border-success mb-3">
-              <h5 class="card-header bg-success text-dark">Makanan Ringan</h5>
-              <div class="card-body">
-                <table class="table table-dark">
-                  <tbody>
-                    <tr>
-                      <td>Kentang Goreng</td>
-                      <td>10K</td>
-                      <td>
-                        <button
-                          class="btn btn-sm btn-success my-cart-btn"
-                          data-id="301"
-                          data-name="Kentang Goreng"
-                          data-summary="Kentang Goreng"
-                          data-price="10000"
-                          data-quantity="1"
-                          data-image="assets/images/food.png"
-                        >
-                          <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Pisang Goreng</td>
-                      <td>10K</td>
-                      <td>
-                        <button
-                          class="btn btn-sm btn-success my-cart-btn"
-                          data-id="302"
-                          data-name="Pisang Goreng"
-                          data-summary="Pisang Goreng"
-                          data-price="10000"
-                          data-quantity="1"
-                          data-image="assets/images/food.png"
-                        >
-                          <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                      </td>
-                    </tr>
 
-                    <tr>
-                      <td>Mendoan</td>
-                      <td>10K</td>
-                      <td>
-                        <button
-                          class="btn btn-sm btn-success my-cart-btn"
-                          data-id="303"
-                          data-name="Mendoan"
-                          data-summary="Mendoan"
-                          data-price="10000"
-                          data-quantity="1"
-                          data-image="assets/images/food.png"
-                        >
-                          <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>Tahu Kemul</td>
-                      <td>10K</td>
-                      <td>
-                        <button
-                          class="btn btn-sm btn-success my-cart-btn"
-                          data-id="304"
-                          data-name="Tahu Kemul"
-                          data-summary="Tahu Kemul"
-                          data-price="10000"
-                          data-quantity="1"
-                          data-image="assets/images/food.png"
-                        >
-                          <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>Tahu Bakso</td>
-                      <td>10K</td>
-                      <td>
-                        <button
-                          class="btn btn-sm btn-success my-cart-btn"
-                          data-id="305"
-                          data-name="Tahu Bakso"
-                          data-summary="Tahu Bakso"
-                          data-price="10000"
-                          data-quantity="1"
-                          data-image="assets/images/food.png"
-                        >
-                          <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>Tahu Garam Pedas</td>
-                      <td>10K</td>
-                      <td>
-                        <button
-                          class="btn btn-sm btn-success my-cart-btn"
-                          data-id="306"
-                          data-name="Tahu Garam Pedas"
-                          data-summary="Tahu Garam Pedas"
-                          data-price="10000"
-                          data-quantity="1"
-                          data-image="assets/images/food.png"
-                        >
-                          <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>Singkong Goreng</td>
-                      <td>10K</td>
-                      <td>
-                        <button
-                          class="btn btn-sm btn-success my-cart-btn"
-                          data-id="307"
-                          data-name="Singkong Goreng"
-                          data-summary="Singkong Goreng"
-                          data-price="10000"
-                          data-quantity="1"
-                          data-image="assets/images/food.png"
-                        >
-                          <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>Perkedel Jagung</td>
-                      <td>10K</td>
-                      <td>
-                        <button
-                          class="btn btn-sm btn-success my-cart-btn"
-                          data-id="308"
-                          data-name="Perkedel Jagung"
-                          data-summary="Perkedel Jagung"
-                          data-price="10000"
-                          data-quantity="1"
-                          data-image="assets/images/food.png"
-                        >
-                          <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>Jamur Crispy</td>
-                      <td>10K</td>
-                      <td>
-                        <button
-                          class="btn btn-sm btn-success my-cart-btn"
-                          data-id="309"
-                          data-name="Jamur Crispy"
-                          data-summary="Jamur Crispy"
-                          data-price="10000"
-                          data-quantity="1"
-                          data-image="assets/images/food.png"
-                        >
-                          <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-          <!-- ./col-sm-6-->
-          <div class="col-sm-6">
-            <div class="card bg-dark text-white border-success mb-3">
-              <h5 class="card-header bg-success text-dark">Aneka Rebusan</h5>
-              <div class="card-body">
-                <table class="table table-dark">
-                  <tbody>
-                    <tr>
-                      <td>Kacang Rebus</td>
-                      <td>10K</td>
-                      <td>
-                        <button
-                          class="btn btn-sm btn-success my-cart-btn"
-                          data-id="401"
-                          data-name="Kacang Rebus"
-                          data-summary="Kacang Rebus"
-                          data-price="10000"
-                          data-quantity="1"
-                          data-image="assets/images/food.png"
-                        >
-                          <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Singkong Rebus</td>
-                      <td>10K</td>
-                      <td>
-                        <button
-                          class="btn btn-sm btn-success my-cart-btn"
-                          data-id="402"
-                          data-name="Singkong Rebus"
-                          data-summary="Singkong Rebus"
-                          data-price="10000"
-                          data-quantity="1"
-                          data-image="assets/images/food.png"
-                        >
-                          <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Pisang Rebus</td>
-                      <td>10K</td>
-                      <td>
-                        <button
-                          class="btn btn-sm btn-success my-cart-btn"
-                          data-id="403"
-                          data-name="Pisang Rebus"
-                          data-summary="Pisang Rebus"
-                          data-price="10000"
-                          data-quantity="1"
-                          data-image="assets/images/food.png"
-                        >
-                          <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-          <!-- ./col-sm-6-->
-        </div>
-        <!-- ./row-->
-        <div class="row">
-          <div class="col-sm-6">
-            <div class="card bg-dark text-white border-danger mb-3">
-              <h5 class="card-header bg-danger text-white">
-                Menu Royokan / Platter
-              </h5>
-              <div class="card-body">
-                <table class="table table-dark">
-                  <tbody>
-                    <tr>
-                      <td>Kentang Goreng + Nugget + Sosis</td>
-                      <td>15K</td>
-                      <td>
-                        <button
-                          class="btn btn-sm btn-success my-cart-btn"
-                          data-id="501"
-                          data-name="Kentang Goreng + Nugget + Sosis"
-                          data-summary="Kentang Goreng + Nugget + Sosis"
-                          data-price="15000"
-                          data-quantity="1"
-                          data-image="assets/images/food.png"
-                        >
-                          <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-          <!-- ./col-sm-6-->
-          <div class="col-sm-6">
-            <div class="card bg-dark text-white border-danger mb-3">
-              <h5 class="card-header bg-danger text-white">
-                Wedangan Non Kopi
-              </h5>
-              <div class="card-body">
-                <table class="table table-dark">
-                  <tbody>
-                    <tr>
-                      <td>Wedang Jahe</td>
-                      <td>6K</td>
-                      <td>
-                        <button
-                          class="btn btn-sm btn-success my-cart-btn"
-                          data-id="601"
-                          data-name="Wedang Jahe"
-                          data-summary="Wedang Jahe"
-                          data-price="6000"
-                          data-quantity="1"
-                          data-image="assets/images/kopi.png"
-                        >
-                          <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Wedang Serbat</td>
-                      <td>5K</td>
-                      <td>
-                        <button
-                          class="btn btn-sm btn-success my-cart-btn"
-                          data-id="602"
-                          data-name="Wedang Serbat"
-                          data-summary="Wedang Serbat"
-                          data-price="5000"
-                          data-quantity="1"
-                          data-image="assets/images/kopi.png"
-                        >
-                          <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Coklat Panas</td>
-                      <td>10K</td>
-                      <td>
-                        <button
-                          class="btn btn-sm btn-success my-cart-btn"
-                          data-id="603"
-                          data-name="Coklat Panas"
-                          data-summary="Coklat Panas"
-                          data-price="10000"
-                          data-quantity="1"
-                          data-image="assets/images/kopi.png"
-                        >
-                          <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Teh Panas</td>
-                      <td>3K</td>
-                      <td>
-                        <button
-                          class="btn btn-sm btn-success my-cart-btn"
-                          data-id="604"
-                          data-name="Teh Panas"
-                          data-summary="Teh Panas"
-                          data-price="3000"
-                          data-quantity="1"
-                          data-image="assets/images/kopi.png"
-                        >
-                          <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Es Teh</td>
-                      <td>4K</td>
-                      <td>
-                        <button
-                          class="btn btn-sm btn-success my-cart-btn"
-                          data-id="605"
-                          data-name="Es Teh"
-                          data-summary="Es Teh"
-                          data-price="4000"
-                          data-quantity="1"
-                          data-image="assets/images/kopi.png"
-                        >
-                          <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Jeruk Panas</td>
-                      <td>4K</td>
-                      <td>
-                        <button
-                          class="btn btn-sm btn-success my-cart-btn"
-                          data-id="606"
-                          data-name="Jeruk Panas"
-                          data-summary="Jeruk Panas"
-                          data-price="4000"
-                          data-quantity="1"
-                          data-image="assets/images/kopi.png"
-                        >
-                          <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Es Jeruk</td>
-                      <td>5K</td>
-                      <td>
-                        <button
-                          class="btn btn-sm btn-success my-cart-btn"
-                          data-id="607"
-                          data-name="Es Jeruk"
-                          data-summary="Es Jeruk"
-                          data-price="5000"
-                          data-quantity="1"
-                          data-image="assets/images/kopi.png"
-                        >
-                          <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Wedang Tape Ketan</td>
-                      <td>5K</td>
-                      <td>
-                        <button
-                          class="btn btn-sm btn-success my-cart-btn"
-                          data-id="608"
-                          data-name="Wedang Tape Ketan"
-                          data-summary="Wedang Tape Ketan"
-                          data-price="5000"
-                          data-quantity="1"
-                          data-image="assets/images/kopi.png"
-                        >
-                          <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Es Tape Ketan</td>
-                      <td>5K</td>
-                      <td>
-                        <button
-                          class="btn btn-sm btn-success my-cart-btn"
-                          data-id="609"
-                          data-name="Es Tape Ketan"
-                          data-summary="Es Tape Ketan"
-                          data-price="5000"
-                          data-quantity="1"
-                          data-image="assets/images/kopi.png"
-                        >
-                          <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-          <!-- ./col-sm-6-->
-        </div>
-        <!-- ./row-->
-        <div class="row">
-          <div class="col-sm-6">
-            <div class="card bg-dark text-white border-info mb-3">
-              <h5 class="card-header bg-info text-dark">Ngemie Seleraku</h5>
-              <div class="card-body">
-                <table class="table table-dark">
-                  <tbody>
-                    <tr>
-                      <td>Mie Goreng</td>
-                      <td>5K</td>
-                      <td>
-                        <button
-                          class="btn btn-sm btn-success my-cart-btn"
-                          data-id="701"
-                          data-name="Mie Goreng"
-                          data-summary="Mie Goreng"
-                          data-price="5000"
-                          data-quantity="1"
-                          data-image="assets/images/food.png"
-                        >
-                          <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Mie Rebus</td>
-                      <td>5K</td>
-                      <td>
-                        <button
-                          class="btn btn-sm btn-success my-cart-btn"
-                          data-id="702"
-                          data-name="Mie Rebus"
-                          data-summary="Mie Rebus"
-                          data-price="5000"
-                          data-quantity="1"
-                          data-image="assets/images/food.png"
-                        >
-                          <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Mie Telor</td>
-                      <td>8K</td>
-                      <td>
-                        <button
-                          class="btn btn-sm btn-success my-cart-btn"
-                          data-id="703"
-                          data-name="Mie Telor"
-                          data-summary="Mie Telor"
-                          data-price="8000"
-                          data-quantity="1"
-                          data-image="assets/images/food.png"
-                        >
-                          <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Mie Vegetarian</td>
-                      <td>8K</td>
-                      <td>
-                        <button
-                          class="btn btn-sm btn-success my-cart-btn"
-                          data-id="704"
-                          data-name="Mie Vegetarian"
-                          data-summary="Mie Vegetarian"
-                          data-price="8000"
-                          data-quantity="1"
-                          data-image="assets/images/food.png"
-                        >
-                          <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Mie Komplit</td>
-                      <td>10K</td>
-                      <td>
-                        <button
-                          class="btn btn-sm btn-success my-cart-btn"
-                          data-id="705"
-                          data-name="Mie Komplit"
-                          data-summary="Mie Komplit"
-                          data-price="10000"
-                          data-quantity="1"
-                          data-image="assets/images/food.png"
-                        >
-                          <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                      </td>
-                    </tr>
-
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-          <!-- ./col-sm-6-->
-          <div class="col-sm-6">
-            <div class="card bg-dark text-white border-info mb-3">
-              <h5 class="card-header bg-info text-dark">Menu Makanan</h5>
-              <div class="card-body">
-                <table class="table table-dark">
-                  <tbody>
-                    <tr>
-                      <td>Soto Ayam Nasi Campur</td>
-                      <td>10K</td>
-                      <td>
-                        <button
-                          class="btn btn-sm btn-success my-cart-btn"
-                          data-id="801"
-                          data-name="Soto Ayam Nasi Campur"
-                          data-summary="Soto Ayam Nasi Campur"
-                          data-price="10000"
-                          data-quantity="1"
-                          data-image="assets/images/food.png"
-                        >
-                          <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Soto Ayam Nasi Pisah</td>
-                      <td>13K</td>
-                      <td>
-                        <button
-                          class="btn btn-sm btn-success my-cart-btn"
-                          data-id="802"
-                          data-name="Soto Ayam Nasi Pisah"
-                          data-summary="Soto Ayam Nasi Pisah"
-                          data-price="13000"
-                          data-quantity="1"
-                          data-image="assets/images/food.png"
-                        >
-                          <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Kupat Tahu Magelang</td>
-                      <td>10K</td>
-                      <td>
-                        <button
-                          class="btn btn-sm btn-success my-cart-btn"
-                          data-id="803"
-                          data-name="Kupat Tahu Magelang"
-                          data-summary="Kupat Tahu Magelang"
-                          data-price="10000"
-                          data-quantity="1"
-                          data-image="assets/images/food.png"
-                        >
-                          <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Kupat Tahu + Telur</td>
-                      <td>13K</td>
-                      <td>
-                        <button
-                          class="btn btn-sm btn-success my-cart-btn"
-                          data-id="804"
-                          data-name="Kupat Tahu + Telur"
-                          data-summary="Kupat Tahu + Telur"
-                          data-price="13000"
-                          data-quantity="1"
-                          data-image="assets/images/food.png"
-                        >
-                          <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Tahu Gimbal</td>
-                      <td>15K</td>
-                      <td>
-                        <button
-                          class="btn btn-sm btn-success my-cart-btn"
-                          data-id="805"
-                          data-name="Tahu Gimbal"
-                          data-summary="Tahu Gimbal"
-                          data-price="15000"
-                          data-quantity="1"
-                          data-image="assets/images/food.png"
-                        >
-                          <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Tahu Gimbal + Telur</td>
-                      <td>18K</td>
-                      <td>
-                        <button
-                          class="btn btn-sm btn-success my-cart-btn"
-                          data-id="806"
-                          data-name="Tahu Gimbal + Telur"
-                          data-summary="Tahu Gimbal + Telur"
-                          data-price="18000"
-                          data-quantity="1"
-                          data-image="assets/images/food.png"
-                        >
-                          <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Aneka Sate</td>
-                      <td>5K</td>
-                      <td>
-                        <button
-                          class="btn btn-sm btn-success my-cart-btn"
-                          data-id="807"
-                          data-name="Aneka Sate"
-                          data-summary="Aneka Sate"
-                          data-price="5000"
-                          data-quantity="1"
-                          data-image="assets/images/food.png"
-                        >
-                          <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Tahu Bakso</td>
-                      <td>5K</td>
-                      <td>
-                        <button
-                          class="btn btn-sm btn-success my-cart-btn"
-                          data-id="808"
-                          data-name="Tahu Bakso"
-                          data-summary="Tahu Bakso"
-                          data-price="5000"
-                          data-quantity="1"
-                          data-image="assets/images/food.png"
-                        >
-                          <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Bergedel</td>
-                      <td>3K</td>
-                      <td>
-                        <button
-                          class="btn btn-sm btn-success my-cart-btn"
-                          data-id="809"
-                          data-name="Bergedel"
-                          data-summary="Bergedel"
-                          data-price="3000"
-                          data-quantity="1"
-                          data-image="assets/images/food.png"
-                        >
-                          <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Tempe Goreng</td>
-                      <td>1K</td>
-                      <td>
-                        <button
-                          class="btn btn-sm btn-success my-cart-btn"
-                          data-id="810"
-                          data-name="Tempe Goreng"
-                          data-summary="Tempe Goreng"
-                          data-price="1000"
-                          data-quantity="1"
-                          data-image="assets/images/food.png"
-                        >
-                          <i class="fa-solid fa-circle-plus"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    
-                    
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-          <!-- ./col-sm-6-->
-        </div>
-        <!-- ./row-->
+        <!-- /tabs-->
       </div>
       <!-- ./container-->
     </main>
