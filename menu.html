@@ -43,7 +43,11 @@
     <!-- Begin page content -->
     <main class="flex-shrink-0">
       <div class="container">
-        <p>Silakan pesan dan bayar di kasir. Terimakasih</p>
+        <p>
+          Klik tombol <i class="fa-solid fa-circle-plus"></i> untuk pilih
+          menu<br />
+          Silakan pesan dan bayar di kasir. Terimakasih
+        </p>
 
         <!-- tabs -->
         <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
@@ -58,7 +62,7 @@
               aria-controls="pills-kedai"
               aria-selected="true"
             >
-              Kedai Kopi Hitam
+              Minuman
             </button>
           </li>
           <li class="nav-item" role="presentation">
@@ -72,21 +76,7 @@
               aria-controls="pills-soto"
               aria-selected="false"
             >
-              Soto Cemplon
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button
-              class="nav-link text-white"
-              id="pills-roti-tab"
-              data-bs-toggle="pill"
-              data-bs-target="#pills-roti"
-              type="button"
-              role="tab"
-              aria-controls="pills-roti"
-              aria-selected="false"
-            >
-              Roti Kapiten
+              Makanan
             </button>
           </li>
         </ul>
@@ -332,14 +322,13 @@
             <div class="row">
               <div class="col-sm-6">
                 <div class="card bg-dark text-white border-danger mb-3">
-                  <h5 class="card-header bg-danger text-white">
-                    Mix
-                  </h5>
+                  <h5 class="card-header bg-danger text-white">Mix</h5>
                   <div class="card-body">
                     <table class="table table-dark">
                       <tbody>
                         <tr>
-                          <td>Special Mix
+                          <td>
+                            Special Mix
                             <p><small>25% Arabica, 75% Robusta</small></p>
                           </td>
                           <td>10K</td>
@@ -357,7 +346,23 @@
                             </button>
                           </td>
                         </tr>
-
+                        <tr>
+                          <td>Special Tubruk</td>
+                          <td>10K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="1302"
+                              data-name="Special Tubruk"
+                              data-summary="Special Tubruk"
+                              data-price="10000"
+                              data-quantity="1"
+                              data-image="assets/images/kopi.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
                       </tbody>
                     </table>
                   </div>
@@ -366,9 +371,7 @@
               <!-- ./col-sm-6-->
               <div class="col-sm-6">
                 <div class="card bg-dark text-white border-danger mb-3">
-                  <h5 class="card-header bg-danger text-white">
-                    Ndak Ngopi (Panas/Dingin)
-                  </h5>
+                  <h5 class="card-header bg-danger text-white">Ndak Ngopi</h5>
                   <div class="card-body">
                     <table class="table table-dark">
                       <tbody>
@@ -407,7 +410,9 @@
                           </td>
                         </tr>
                         <tr>
-                          <td>Coklat</td>
+                          <td>
+                            Coklat <span><small>(Panas/Dingin)</small></span>
+                          </td>
                           <td>10K</td>
                           <td>
                             <button
@@ -424,7 +429,9 @@
                           </td>
                         </tr>
                         <tr>
-                          <td>Jeruk</td>
+                          <td>
+                            Jeruk <span><small>(Panas/Dingin)</small></span>
+                          </td>
                           <td>6K</td>
                           <td>
                             <button
@@ -441,7 +448,9 @@
                           </td>
                         </tr>
                         <tr>
-                          <td>Moccacino</td>
+                          <td>
+                            Moccacino <span><small>(Panas/Dingin)</small></span>
+                          </td>
                           <td>10K</td>
                           <td>
                             <button
@@ -464,6 +473,200 @@
               </div>
               <!-- ./col-sm-6-->
             </div>
+            <!-- ./row-->
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="card bg-dark text-white border-danger mb-3">
+                  <h5 class="card-header bg-danger text-white">
+                    Minuman (Soto Cemplon)
+                  </h5>
+                  <div class="card-body">
+                    <table class="table table-dark">
+                      <tbody>
+                        <tr>
+                          <td>Teh Panas</td>
+                          <td>3K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="604"
+                              data-name="Teh Panas"
+                              data-summary="Teh Panas"
+                              data-price="3000"
+                              data-quantity="1"
+                              data-image="assets/images/kopi.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Es Teh</td>
+                          <td>4K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="605"
+                              data-name="Es Teh"
+                              data-summary="Es Teh"
+                              data-price="4000"
+                              data-quantity="1"
+                              data-image="assets/images/kopi.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Wedang Tape Ketan</td>
+                          <td>5K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="608"
+                              data-name="Wedang Tape Ketan"
+                              data-summary="Wedang Tape Ketan"
+                              data-price="5000"
+                              data-quantity="1"
+                              data-image="assets/images/kopi.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Es Tape Ketan</td>
+                          <td>5K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="609"
+                              data-name="Es Tape Ketan"
+                              data-summary="Es Tape Ketan"
+                              data-price="5000"
+                              data-quantity="1"
+                              data-image="assets/images/kopi.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <!-- ./col-sm-6-->
+              <div class="col-sm-6">
+                <div class="card bg-dark text-white border-warning mb-3">
+                  <h5 class="card-header bg-warning text-dark">
+                    Minuman Kekinian (Roti Kapiten)
+                  </h5>
+                  <div class="card-body">
+                    <table class="table table-dark">
+                      <tbody>
+                        <tr>
+                          <td>Es Kopi Susu</td>
+                          <td>15K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="1201"
+                              data-name="Es Kopi Susu"
+                              data-summary="Es Kopi Susu"
+                              data-price="15000"
+                              data-quantity="1"
+                              data-image="assets/images/kopi.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Es Kopi Gula Aren</td>
+                          <td>15K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="1202"
+                              data-name="Es Kopi Gula Aren"
+                              data-summary="Es Kopi Gula Aren"
+                              data-price="15000"
+                              data-quantity="1"
+                              data-image="assets/images/kopi.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Es Capuccino</td>
+                          <td>15K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="1203"
+                              data-name="Es Capuccino"
+                              data-summary="Es Capuccino"
+                              data-price="15000"
+                              data-quantity="1"
+                              data-image="assets/images/kopi.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Es Coklat</td>
+                          <td>15K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="1204"
+                              data-name="Es Coklat kapiten"
+                              data-summary="Es Coklat"
+                              data-price="15000"
+                              data-quantity="1"
+                              data-image="assets/images/kopi.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Kopi Panas</td>
+                          <td>13K</td>
+                          <td>
+                            <button
+                              class="btn btn-sm btn-success my-cart-btn"
+                              data-id="1205"
+                              data-name="Kopi Panas kapiten"
+                              data-summary="Kopi Panas"
+                              data-price="13000"
+                              data-quantity="1"
+                              data-image="assets/images/kopi.png"
+                            >
+                              <i class="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <!-- ./col-sm-6-->
+            </div>
+            <!-- ./row-->
+          </div>
+          <!-- ./tabpane -->
+          <div
+            class="tab-pane fade"
+            id="pills-soto"
+            role="tabpanel"
+            aria-labelledby="pills-soto-tab"
+            tabindex="0"
+          >
             <div class="row">
               <div class="col-sm-6">
                 <div class="card bg-dark text-white border-success mb-3">
@@ -631,57 +834,6 @@
                             </button>
                           </td>
                         </tr>
-                        <tr>
-                          <td>Kacang Rebus</td>
-                          <td>10K</td>
-                          <td>
-                            <button
-                              class="btn btn-sm btn-success my-cart-btn"
-                              data-id="401"
-                              data-name="Kacang Rebus"
-                              data-summary="Kacang Rebus"
-                              data-price="10000"
-                              data-quantity="1"
-                              data-image="assets/images/food.png"
-                            >
-                              <i class="fa-solid fa-circle-plus"></i>
-                            </button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Singkong Rebus</td>
-                          <td>10K</td>
-                          <td>
-                            <button
-                              class="btn btn-sm btn-success my-cart-btn"
-                              data-id="402"
-                              data-name="Singkong Rebus"
-                              data-summary="Singkong Rebus"
-                              data-price="10000"
-                              data-quantity="1"
-                              data-image="assets/images/food.png"
-                            >
-                              <i class="fa-solid fa-circle-plus"></i>
-                            </button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Pisang Rebus</td>
-                          <td>10K</td>
-                          <td>
-                            <button
-                              class="btn btn-sm btn-success my-cart-btn"
-                              data-id="403"
-                              data-name="Pisang Rebus"
-                              data-summary="Pisang Rebus"
-                              data-price="10000"
-                              data-quantity="1"
-                              data-image="assets/images/food.png"
-                            >
-                              <i class="fa-solid fa-circle-plus"></i>
-                            </button>
-                          </td>
-                        </tr>
                       </tbody>
                     </table>
                   </div>
@@ -690,20 +842,22 @@
               <!-- ./col-sm-6-->
               <div class="col-sm-6">
                 <div class="card bg-dark text-white border-success mb-3">
-                  <h5 class="card-header bg-success text-white">Ngemie Seleraku</h5>
+                  <h5 class="card-header bg-success text-white">
+                    Ngemie Seleraku
+                  </h5>
                   <div class="card-body">
                     <table class="table table-dark">
                       <tbody>
                         <tr>
                           <td>Mie Goreng</td>
-                          <td>5K</td>
+                          <td>10K</td>
                           <td>
                             <button
                               class="btn btn-sm btn-success my-cart-btn"
                               data-id="701"
                               data-name="Mie Goreng"
                               data-summary="Mie Goreng"
-                              data-price="5000"
+                              data-price="10000"
                               data-quantity="1"
                               data-image="assets/images/food.png"
                             >
@@ -713,14 +867,14 @@
                         </tr>
                         <tr>
                           <td>Mie Rebus</td>
-                          <td>5K</td>
+                          <td>10K</td>
                           <td>
                             <button
                               class="btn btn-sm btn-success my-cart-btn"
                               data-id="702"
                               data-name="Mie Rebus"
                               data-summary="Mie Rebus"
-                              data-price="5000"
+                              data-price="10000"
                               data-quantity="1"
                               data-image="assets/images/food.png"
                             >
@@ -730,14 +884,14 @@
                         </tr>
                         <tr>
                           <td>Mie Telor</td>
-                          <td>8K</td>
+                          <td>13K</td>
                           <td>
                             <button
                               class="btn btn-sm btn-success my-cart-btn"
                               data-id="703"
                               data-name="Mie Telor"
                               data-summary="Mie Telor"
-                              data-price="8000"
+                              data-price="13000"
                               data-quantity="1"
                               data-image="assets/images/food.png"
                             >
@@ -747,14 +901,14 @@
                         </tr>
                         <tr>
                           <td>Mie Vegetarian</td>
-                          <td>8K</td>
+                          <td>12K</td>
                           <td>
                             <button
                               class="btn btn-sm btn-success my-cart-btn"
                               data-id="704"
                               data-name="Mie Vegetarian"
                               data-summary="Mie Vegetarian"
-                              data-price="8000"
+                              data-price="12000"
                               data-quantity="1"
                               data-image="assets/images/food.png"
                             >
@@ -764,14 +918,14 @@
                         </tr>
                         <tr>
                           <td>Mie Komplit</td>
-                          <td>10K</td>
+                          <td>15K</td>
                           <td>
                             <button
                               class="btn btn-sm btn-success my-cart-btn"
                               data-id="705"
                               data-name="Mie Komplit"
                               data-summary="Mie Komplit"
-                              data-price="10000"
+                              data-price="15000"
                               data-quantity="1"
                               data-image="assets/images/food.png"
                             >
@@ -803,8 +957,8 @@
                             <button
                               class="btn btn-sm btn-success my-cart-btn"
                               data-id="501"
-                              data-name="Kentang Goreng + Nugget + Sosis"
-                              data-summary="Kentang Goreng + Nugget + Sosis"
+                              data-name="Kentang + Nugget + Sosis"
+                              data-summary="Kentang + Nugget + Sosis"
                               data-price="15000"
                               data-quantity="1"
                               data-image="assets/images/food.png"
@@ -820,23 +974,8 @@
               </div>
               <!-- ./col-sm-6-->
               <div class="col-sm-6">
-                
-              </div>
-              <!-- ./col-sm-6-->
-            </div>
-          </div>
-          <!-- ./tabpane -->
-          <div
-            class="tab-pane fade"
-            id="pills-soto"
-            role="tabpanel"
-            aria-labelledby="pills-soto-tab"
-            tabindex="0"
-          >
-            <div class="row">
-              <div class="col-sm-6">
                 <div class="card bg-dark text-white border-info mb-3">
-                  <h5 class="card-header bg-info text-dark">Makanan</h5>
+                  <h5 class="card-header bg-info text-dark">Soto Cemplon</h5>
                   <div class="card-body">
                     <table class="table table-dark">
                       <tbody>
@@ -960,24 +1099,7 @@
                           </td>
                         </tr>
                         <tr>
-                          <td>Tahu Bakso</td>
-                          <td>5K</td>
-                          <td>
-                            <button
-                              class="btn btn-sm btn-success my-cart-btn"
-                              data-id="808"
-                              data-name="Tahu Bakso"
-                              data-summary="Tahu Bakso"
-                              data-price="5000"
-                              data-quantity="1"
-                              data-image="assets/images/food.png"
-                            >
-                              <i class="fa-solid fa-circle-plus"></i>
-                            </button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Bergedel</td>
+                          <td>Perkedel Kentang</td>
                           <td>3K</td>
                           <td>
                             <button
@@ -1016,130 +1138,8 @@
                 </div>
               </div>
               <!-- ./col-sm-6-->
-              <div class="col-sm-6">
-                <div class="card bg-dark text-white border-danger mb-3">
-                  <h5 class="card-header bg-danger text-white">Minuman</h5>
-                  <div class="card-body">
-                    <table class="table table-dark">
-                      <tbody>
-                        <tr>
-                          <td>Teh Panas</td>
-                          <td>3K</td>
-                          <td>
-                            <button
-                              class="btn btn-sm btn-success my-cart-btn"
-                              data-id="604"
-                              data-name="Teh Panas"
-                              data-summary="Teh Panas"
-                              data-price="3000"
-                              data-quantity="1"
-                              data-image="assets/images/kopi.png"
-                            >
-                              <i class="fa-solid fa-circle-plus"></i>
-                            </button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Es Teh</td>
-                          <td>4K</td>
-                          <td>
-                            <button
-                              class="btn btn-sm btn-success my-cart-btn"
-                              data-id="605"
-                              data-name="Es Teh"
-                              data-summary="Es Teh"
-                              data-price="4000"
-                              data-quantity="1"
-                              data-image="assets/images/kopi.png"
-                            >
-                              <i class="fa-solid fa-circle-plus"></i>
-                            </button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Jeruk Panas</td>
-                          <td>4K</td>
-                          <td>
-                            <button
-                              class="btn btn-sm btn-success my-cart-btn"
-                              data-id="606"
-                              data-name="Jeruk Panas"
-                              data-summary="Jeruk Panas"
-                              data-price="4000"
-                              data-quantity="1"
-                              data-image="assets/images/kopi.png"
-                            >
-                              <i class="fa-solid fa-circle-plus"></i>
-                            </button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Es Jeruk</td>
-                          <td>5K</td>
-                          <td>
-                            <button
-                              class="btn btn-sm btn-success my-cart-btn"
-                              data-id="607"
-                              data-name="Es Jeruk"
-                              data-summary="Es Jeruk"
-                              data-price="5000"
-                              data-quantity="1"
-                              data-image="assets/images/kopi.png"
-                            >
-                              <i class="fa-solid fa-circle-plus"></i>
-                            </button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Wedang Tape Ketan</td>
-                          <td>5K</td>
-                          <td>
-                            <button
-                              class="btn btn-sm btn-success my-cart-btn"
-                              data-id="608"
-                              data-name="Wedang Tape Ketan"
-                              data-summary="Wedang Tape Ketan"
-                              data-price="5000"
-                              data-quantity="1"
-                              data-image="assets/images/kopi.png"
-                            >
-                              <i class="fa-solid fa-circle-plus"></i>
-                            </button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Es Tape Ketan</td>
-                          <td>5K</td>
-                          <td>
-                            <button
-                              class="btn btn-sm btn-success my-cart-btn"
-                              data-id="609"
-                              data-name="Es Tape Ketan"
-                              data-summary="Es Tape Ketan"
-                              data-price="5000"
-                              data-quantity="1"
-                              data-image="assets/images/kopi.png"
-                            >
-                              <i class="fa-solid fa-circle-plus"></i>
-                            </button>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-              <!-- ./col-sm-6-->
             </div>
-            <!-- ./row-->
-          </div>
-          <div
-            class="tab-pane fade"
-            id="pills-roti"
-            role="tabpanel"
-            aria-labelledby="pills-roti-tab"
-            tabindex="0"
-          >
+            <!-- ./row -->
             <div class="row">
               <div class="col-sm-6">
                 <div class="card bg-dark text-white border-warning mb-3">
@@ -1201,7 +1201,9 @@
                           </td>
                         </tr>
                         <tr>
-                          <td>Roti Kopi Mix</td>
+                          <td>Roti Kopi Mix
+                            <p><small>3 Roti Kopi + 3 Donat Nikmat</small></p>
+                          </td>
                           <td>35K</td>
                           <td>
                             <button
@@ -1281,7 +1283,9 @@
                           </td>
                         </tr>
                         <tr>
-                          <td>Donat Mix</td>
+                          <td>Donat Mix
+                            <p><small>3 Roti Kopi + 3 Donat Nikmat</small></p>
+                          </td>
                           <td>35K</td>
                           <td>
                             <button
@@ -1317,7 +1321,7 @@
                             Roti Gembong
                             <p>
                               <small
-                                >Strawberry, Tiramisu, Matcha, Vanilla, Coklat,
+                                >Strawberry/Tiramisu/Matcha/Vanilla/Coklat,
                                 Taro</small
                               >
                             </p>
@@ -1340,7 +1344,7 @@
                         <tr>
                           <td>
                             Roti Gembong
-                            <p><small>Choco Crunch, Susu Keju</small></p>
+                            <p><small>Choco Crunch/Susu Keju</small></p>
                           </td>
                           <td>18K</td>
                           <td>
@@ -1363,108 +1367,16 @@
                 </div>
               </div>
               <!-- ./col-sm-6-->
-              <div class="col-sm-6">
-                <div class="card bg-dark text-white border-warning mb-3">
-                  <h5 class="card-header bg-warning text-dark">
-                    Minuman Kekinian
-                  </h5>
-                  <div class="card-body">
-                    <table class="table table-dark">
-                      <tbody>
-                        <tr>
-                          <td>Es Kopi Susu</td>
-                          <td>15K</td>
-                          <td>
-                            <button
-                              class="btn btn-sm btn-success my-cart-btn"
-                              data-id="1201"
-                              data-name="Es Kopi Susu"
-                              data-summary="Es Kopi Susu"
-                              data-price="15000"
-                              data-quantity="1"
-                              data-image="assets/images/kopi.png"
-                            >
-                              <i class="fa-solid fa-circle-plus"></i>
-                            </button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Es Kopi Gula Aren</td>
-                          <td>15K</td>
-                          <td>
-                            <button
-                              class="btn btn-sm btn-success my-cart-btn"
-                              data-id="1202"
-                              data-name="Es Kopi Gula Aren"
-                              data-summary="Es Kopi Gula Aren"
-                              data-price="15000"
-                              data-quantity="1"
-                              data-image="assets/images/kopi.png"
-                            >
-                              <i class="fa-solid fa-circle-plus"></i>
-                            </button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Es Capuccino</td>
-                          <td>15K</td>
-                          <td>
-                            <button
-                              class="btn btn-sm btn-success my-cart-btn"
-                              data-id="1203"
-                              data-name="Es Capuccino"
-                              data-summary="Es Capuccino"
-                              data-price="15000"
-                              data-quantity="1"
-                              data-image="assets/images/kopi.png"
-                            >
-                              <i class="fa-solid fa-circle-plus"></i>
-                            </button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Es Coklat</td>
-                          <td>15K</td>
-                          <td>
-                            <button
-                              class="btn btn-sm btn-success my-cart-btn"
-                              data-id="1204"
-                              data-name="Es Coklat kapiten"
-                              data-summary="Es Coklat"
-                              data-price="15000"
-                              data-quantity="1"
-                              data-image="assets/images/kopi.png"
-                            >
-                              <i class="fa-solid fa-circle-plus"></i>
-                            </button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Kopi Panas</td>
-                          <td>13K</td>
-                          <td>
-                            <button
-                              class="btn btn-sm btn-success my-cart-btn"
-                              data-id="1205"
-                              data-name="Kopi Panas kapiten"
-                              data-summary="Kopi Panas"
-                              data-price="13000"
-                              data-quantity="1"
-                              data-image="assets/images/kopi.png"
-                            >
-                              <i class="fa-solid fa-circle-plus"></i>
-                            </button>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-              <!-- ./col-sm-6-->
             </div>
             <!-- ./row-->
           </div>
+          <div
+            class="tab-pane fade"
+            id="pills-roti"
+            role="tabpanel"
+            aria-labelledby="pills-roti-tab"
+            tabindex="0"
+          ></div>
           <!-- ./tabpane-->
           <div
             class="tab-pane fade"
